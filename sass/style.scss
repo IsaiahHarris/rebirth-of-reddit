@@ -21,8 +21,8 @@ body{
   background-color:#383838;
   color:#989898
 }
-.subred-choice1, .subred-choice2, .subred-choice3, .subred-choice4{
-  padding:8px;
+.subred-choice1, .subred-choice2, .subred-choice3, .hawaii-sub-red{
+  padding:15px;
   padding-top:11px;
   height: 44px;
 }
@@ -33,21 +33,52 @@ body{
   width:351px;
   margin-top:12px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction:column;
   justify-content: space-between;
   margin-left: 12px;
 }
 
-.soccer-posts-title{
+.soccer-posts-title, .nature-post-title, .hawaii-post-title{
   background-color: whitesmoke;
-  border:1px solid black;
   color:#333333;
+  padding:10px;
+  font-weight: bold;
 }
-.soccer-posts-author{
+.soccer-posts-author, .nature-post-author, .hawaii-post-author{
   padding: 5px;
+  font-weight: normal;
+}
+.soccer-posts-description, .hawaii-post-description{
+  height: 20px;
+  width:300px;
+  font-weight:normal;
+  padding: 5px;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+}
+.soccer-posts-description:active{
+  overflow: visible;
+  height: 300px;
+}
+.hawaii-post-description:active{
+  overflow: visible;
+  height: 300px;
 }
 .soccer-posts-image{
- background-image: url('https://vignette.wikia.nocookie.net/spongebob/images/a/a3/Patrick_Is_Kool.jpg/revision/latest?cb=20091114112948');
+ background-image: url('https://photos.smugmug.com/Soccer/SY-20152016/Vs-Kaimuki-Vars-021016/i-QPwzKSQ/0/60ab5670/X3/DSC_4901-X3.jpg');
  background-size: 350px 200px;
+ border:solid 10px whitesmoke;
  height: 200px;
+}
+
+.nature-post-image, .hawaii-post-image{
+  background-size: 350px 200px;
+  height: 140px;
+  border: 10px solid whitesmoke;
+  padding:30px;
 }
