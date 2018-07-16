@@ -1,6 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body{
   background-image:url('https://raw.githubusercontent.com/IsaiahHarris/rebirth-of-reddit/master/assets/bg.jpg');
 }
+
 .main-header{
   width: 375px;
   height: 65px;
@@ -26,6 +32,13 @@ body{
   padding-top:11px;
   height: 44px;
 }
+.subred-choice1:hover, .subred-choice2:hover, .subred-choice3:hover, .hawaii-sub-red:hover{
+  padding:15px;
+  padding-top:11px;
+  height: 44px;
+  color:red;
+}
+
 .subred-choice1, .subred-choice2, .subred-choice3{
   border-right:solid 0.1px whitesmoke;
 }
@@ -39,36 +52,35 @@ body{
   margin-left: 12px;
 }
 
-.soccer-posts-title, .nature-post-title, .hawaii-post-title{
+.soccer-posts-title, .nature-post-title, .hawaii-post-title, .random-post-title{
   background-color: whitesmoke;
   color:#333333;
-  padding:10px;
+  padding-top:5px;
+  padding-left:5px;
   font-weight: bold;
 }
-.soccer-posts-author, .nature-post-author, .hawaii-post-author{
+.soccer-posts-author, .nature-post-author, .hawaii-post-author, .random-post-author{
   padding: 5px;
   font-weight: normal;
 }
-.soccer-posts-description, .hawaii-post-description{
-  height: 20px;
+.soccer-posts-description, .hawaii-post-description, .random-post-description, .nature-posts-description{
   width:300px;
   font-weight:normal;
   padding: 5px;
   text-overflow:ellipsis;
   overflow: hidden;
-  white-space: nowrap;
-  display: flex;
-  flex-direction:column;
-  flex-wrap:wrap;
+  white-space: nowrap; 
 }
-.soccer-posts-description:active{
+
+.active{
+  width:300px;
+  font-weight:normal;
+  padding: 5px;
   overflow: visible;
-  height: 300px;
+  white-space: normal;
+  word-break: break-word;
 }
-.hawaii-post-description:active{
-  overflow: visible;
-  height: 300px;
-}
+
 .soccer-posts-image{
  background-image: url('https://photos.smugmug.com/Soccer/SY-20152016/Vs-Kaimuki-Vars-021016/i-QPwzKSQ/0/60ab5670/X3/DSC_4901-X3.jpg');
  background-size: 350px 200px;
@@ -76,7 +88,7 @@ body{
  height: 200px;
 }
 
-.nature-post-image, .hawaii-post-image{
+.nature-post-image, .hawaii-post-image, .random-post-image{
   background-size: 350px 200px;
   height: 140px;
   border: 10px solid whitesmoke;
