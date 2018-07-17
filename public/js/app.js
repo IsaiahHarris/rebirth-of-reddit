@@ -61,6 +61,7 @@ function getRedditData() {
   postsContainer.innerHTML = '';
   for (let i = 0; i < children.length; i++) {
     const postsCard = document.createElement('div');
+    postsCard.className = 'posts-card';
     let postImage = document.createElement('div');
     if (responseObj.data.children[i].data.url.charAt(responseObj.data.children[i].data.url.length - 1) === 'g') {
       postImage.style.backgroundImage = 'url("' + responseObj.data.children[i].data.url + '")'
