@@ -74,6 +74,13 @@ function getRedditData() {
 
     let postTitle = document.createElement('div');
     postTitle.className = 'posts-title';
+    postTitle.addEventListener('click', function () {
+    if (postTitle.className === 'posts-title') {
+      postTitle.className = 'posts-title-active';
+    } else if (postTitle.className === 'posts-title-active') {
+      postTitle.className = 'posts-title';
+    }
+  })
     postTitle.innerHTML = children[i].data.title;
     postsCard.appendChild(postTitle);
 
