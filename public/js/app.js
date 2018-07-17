@@ -9,8 +9,7 @@ let randomSubRedChoice = document.getElementById('random-subRed')
 //random choice generator
 
  let randomSubRedChoices = ['Pizza', 'japanpics', 'Astronomy', 'NatureIsFuckingLit', 'electricdaisycarnival', 'ArchitecturePorn', 'CoolPics'];
-
-
+ 
   function randomSubRedditFunc(){
     
     // let lastSubRed;
@@ -68,7 +67,7 @@ function getRedditData() {
     } else if (responseObj.data.children[i].data.url.charAt(responseObj.data.children[i].data.url.length - 1) !== 'g' && responseObj.data.children[i].data.thumbnail.charAt(responseObj.data.children[i].data.thumbnail.length - 1) === 'g') {
       postImage.style.backgroundImage = 'url("' + responseObj.data.children[i].data.thumbnail + '")'
     }else {
-      postImage.style.backgroundImage = 'url("' + 'https://vignette.wikia.nocookie.net/main-cast/images/5/5b/Sorry-image-not-available.png/revision/latest/scale-to-width-down/480?cb=20160625173435' + '")';
+      postImage.style.backgroundImage = 'url("' + 'https://photos.smugmug.com/Soccer/SY-20152016/Vs-Kaimuki-Vars-021016/i-QPwzKSQ/0/60ab5670/X3/DSC_4901-X3.jpg' + '")';
     }
     postImage.className = 'posts-image';
     postsCard.appendChild(postImage);
@@ -98,7 +97,7 @@ function getRedditData() {
     let postDescription = document.createElement('div');
     postDescription.className = 'posts-description';
     if (children[i].data.selftext === '') {
-      postDescription.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec convallis ligula. Ut venenatis ante vel tortor mattis, at feugiat mi dapibus. Nullam volutpat turpis quis lectus aliquam, suscipit commodo mauris vulputate. Nulla facilisi. Nulla ultrices feugiat lorem vel scelerisque. Nulla iaculis, leo et facilisis lobortis, nisi massa egestas sapien, in placerat dui quam ut sem. Aenean eu euismod magna, nec tempor metus. Proin mollis, sem sed laoreet ornare, odio nunc ultricies mi, pellentesque posuere tellus libero efficitur erat. Donec nunc ipsum, vehicula eget condimentum in, volutpat ut lacus. Ut maximus sem a pellentesque iaculis. Aliquam sit amet commodo nisl. Aliquam rhoncus, quam at pellentesque pulvinar, dui dui congue est, venenatis congue nunc augue at magna. Morbi eu est et magna mollis mattis. Vivamus auctor lectus et accumsan elementum.';
+      postDescription.innerHTML = "Lorizzle ipsum nizzle i'm in the shizzle amizzle, consectetizzle adipiscing dawg. Rizzle things fo shizzle, bow wow wow volutpizzle, suscipizzle quizzle, gravida vel, check it out. Pellentesque yo tortizzle. Go to hizzle eros. izzle dolizzle dapibizzle turpis tempizzle cool. Maurizzle pellentesque nibh away turpis. Sheezy izzle pimpin'. Fizzle shizznit rhoncizzle boofron. In shizznit habitasse bow wow wow dictumst. dapibizzle. Curabitizzle tellus urna, pretium daahng dawg, mattizzle ac, eleifend vitae, nunc. The bizzle suscipizzle. Hizzle semper velit sed purizzle.";
     } else {
       postDescription.innerHTML = children[i].data.selftext;
     }
@@ -121,4 +120,11 @@ let searchBar = document.getElementById('search-bar');
 searchButton.addEventListener('click', function(){
   console.log('clicked')
   sendRedditRequest(searchBar.innerHTML)();
+
+let plusx = document.getElementById('iconx');
+console.log(plusx);
+plusx.addEventListener('click', function(){
+  console.log('clicked');
+  console.log('hiiiiii');
+})
 })

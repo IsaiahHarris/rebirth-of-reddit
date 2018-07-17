@@ -3,7 +3,20 @@ html, body {
   padding: 0; }
 
 body {
-  background-image: url("https://raw.githubusercontent.com/IsaiahHarris/rebirth-of-reddit/master/assets/bg.jpg"); }
+  background-image: url("https://raw.githubusercontent.com/IsaiahHarris/rebirth-of-reddit/master/assets/bg.jpg");
+  width: 100%;
+  height: 100%;
+  font-family: Lato; }
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start; }
+
+.icon {
+  border: solid red 1px;
+  margin-left: 0px; }
 
 .main-header {
   width: 375px;
@@ -11,7 +24,7 @@ body {
   background-color: whitesmoke;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center; }
 
 .subreddit-choices-container {
@@ -27,7 +40,7 @@ body {
 .search-container {
   display: flex;
   justify-content: center;
-  margin-top: 6px; }
+  margin-top: 10px; }
 
 .search-bar {
   color: #383838;
@@ -60,7 +73,7 @@ body {
 
 #posts-container {
   width: 351px;
-  margin-top: 12px;
+  margin-top: 5px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -145,13 +158,13 @@ body {
   .search-bar {
     color: #383838;
     background-color: whitesmoke;
-    width: 100px; }
+    width: 300px; }
   .search-button {
     height: 20px;
     background-color: whitesmoke;
     color: #383838;
     padding: 3px;
-    width: 50px; }
+    width: 150px; }
   .subred-choice1, .subred-choice2, .subred-choice3, .hawaii-sub-red {
     padding: 15px;
     padding-top: 11px;
@@ -169,12 +182,12 @@ body {
   .subred-choice1, .subred-choice2, .subred-choice3 {
     border-right: solid 0.1px whitesmoke; }
   #posts-container {
-    width: 50%;
+    width: 720px;
     margin-top: 12px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 12px; }
+    margin-left: 213px; }
   .posts-title {
     background-color: whitesmoke;
     color: #333333;
@@ -197,29 +210,27 @@ body {
     padding: 5px;
     font-weight: normal; }
   .posts-description {
-    width: 300px;
+    width: 351px;
     font-weight: normal;
     padding: 5px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap; }
   .active {
-    width: 300px;
+    width: 351px;
     font-weight: normal;
     padding: 5px;
     overflow: visible;
     white-space: normal;
     word-break: break-word; }
   .posts-image {
-    background-image: url("https://photos.smugmug.com/Soccer/SY-20152016/Vs-Kaimuki-Vars-021016/i-QPwzKSQ/0/60ab5670/X3/DSC_4901-X3.jpg");
-    background-size: 350px 200px;
-    border: solid 10px whitesmoke;
-    height: 200px; }
-  .posts-image {
-    background-size: 350px 200px;
     height: 140px;
-    border: 12px solid whitesmoke;
+    width: 351px;
+    border: 10px solid whitesmoke;
     padding: 30px;
-    margin-top: 15px; }
+    margin-top: 17px; }
   .posts-card {
-    width: 702px; } }
+    width: 351px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; } }
