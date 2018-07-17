@@ -25,24 +25,28 @@ body{
   justify-content: space-between;
   align-content: center;
   background-color:#383838;
-  color:#989898
 }
+
+
 .subred-choice1, .subred-choice2, .subred-choice3, .hawaii-sub-red{
   padding:15px;
   padding-top:11px;
   height: 44px;
+  color:#989898;
 }
 .subred-choice1:hover, .subred-choice2:hover, .subred-choice3:hover, .hawaii-sub-red:hover{
   padding:15px;
   padding-top:11px;
-  height: 44px;
-  color:red;
-}
+  color:#CD5334;
+    transition: color 0.35s ease-out;
+    color: #CD5334;
+
+  }
 
 .subred-choice1, .subred-choice2, .subred-choice3{
   border-right:solid 0.1px whitesmoke;
 }
-#soccer-posts-container{
+#posts-container{
   width:351px;
   margin-top:12px;
   display: flex;
@@ -52,18 +56,19 @@ body{
   margin-left: 12px;
 }
 
-.soccer-posts-title, .nature-post-title, .hawaii-post-title, .random-post-title{
+.posts-title{
   background-color: whitesmoke;
   color:#333333;
   padding-top:5px;
   padding-left:5px;
   font-weight: bold;
 }
-.soccer-posts-author, .nature-post-author, .hawaii-post-author, .random-post-author{
+.posts-author{
   padding: 5px;
+
   font-weight: normal;
 }
-.soccer-posts-description, .hawaii-post-description, .random-post-description, .nature-posts-description{
+.posts-description{
   width:300px;
   font-weight:normal;
   padding: 5px;
@@ -81,16 +86,17 @@ body{
   word-break: break-word;
 }
 
-.soccer-posts-image{
+.posts-image{
  background-image: url('https://photos.smugmug.com/Soccer/SY-20152016/Vs-Kaimuki-Vars-021016/i-QPwzKSQ/0/60ab5670/X3/DSC_4901-X3.jpg');
  background-size: 350px 200px;
  border:solid 10px whitesmoke;
  height: 200px;
 }
 
-.nature-post-image, .hawaii-post-image, .random-post-image{
+ .posts-image{
   background-size: 350px 200px;
   height: 140px;
-  border: 10px solid whitesmoke;
+  border: 12px solid whitesmoke;
   padding:30px;
+  margin-top:15px;
 }
