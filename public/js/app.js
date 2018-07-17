@@ -8,24 +8,24 @@ let hawaiiSubRedChoice = document.getElementById('hawaii-subRed');
 let randomSubRedChoice = document.getElementById('random-subRed')
 //random choice generator
 
- let randomSubRedChoices = ['Pizza', 'japanpics', 'Astronomy', 'NatureIsFuckingLit', 'electricdaisycarnival', 'ArchitecturePorn', 'CoolPics'];
- 
-  function randomSubRedditFunc(){
-    
-    // let lastSubRed;
-    let randomize = randomSubRedChoices[Math.floor(Math.random() * randomSubRedChoices.length)];
+let randomSubRedChoices = ['Pizza', 'japanpics', 'Astronomy', 'NatureIsFuckingLit', 'electricdaisycarnival', 'ArchitecturePorn', 'CoolPics', ''];
+
+function randomSubRedditFunc() {
+
+  // let lastSubRed;
+  let randomize = randomSubRedChoices[Math.floor(Math.random() * randomSubRedChoices.length)];
   console.log(randomize);
-    // while (randomSubRed === lastSubRed) {
-    //   randomSubRed = randomSubRedChoices[Math.floor(Math.random() * randomSubRedChoices.length)];
-    // }
-    // lastSubRed = randomSubRed;
-    // postsContainer.innerHTML = '';
-    // const getRandomObj = new XMLHttpRequest();
-    // getRandomObj.addEventListener('load', getRedditData);
-    // getRandomObj.open('GET', `https://www.reddit.com/r/${randomize}/.json?raw_json=1`);
-    // getRandomObj.send();
-    sendRedditRequest(randomize)();
-    
+  // while (randomSubRed === lastSubRed) {
+  //   randomSubRed = randomSubRedChoices[Math.floor(Math.random() * randomSubRedChoices.length)];
+  // }
+  // lastSubRed = randomSubRed;
+  // postsContainer.innerHTML = '';
+  // const getRandomObj = new XMLHttpRequest();
+  // getRandomObj.addEventListener('load', getRedditData);
+  // getRandomObj.open('GET', `https://www.reddit.com/r/${randomize}/.json?raw_json=1`);
+  // getRandomObj.send();
+  sendRedditRequest(randomize)();
+
 }
 
 
@@ -56,7 +56,7 @@ function getRedditData() {
   const responseObj = JSON.parse(this.responseText);
   console.log(responseObj);
   let children = responseObj.data.children;
-  
+
   postsContainer.innerHTML = '';
   for (let i = 0; i < children.length; i++) {
     const postsCard = document.createElement('div');
@@ -66,7 +66,7 @@ function getRedditData() {
       postImage.style.backgroundImage = 'url("' + responseObj.data.children[i].data.url + '")'
     } else if (responseObj.data.children[i].data.url.charAt(responseObj.data.children[i].data.url.length - 1) !== 'g' && responseObj.data.children[i].data.thumbnail.charAt(responseObj.data.children[i].data.thumbnail.length - 1) === 'g') {
       postImage.style.backgroundImage = 'url("' + responseObj.data.children[i].data.thumbnail + '")'
-    }else {
+    } else {
       postImage.style.backgroundImage = 'url("' + 'https://photos.smugmug.com/Soccer/SY-20152016/Vs-Kaimuki-Vars-021016/i-QPwzKSQ/0/60ab5670/X3/DSC_4901-X3.jpg' + '")';
     }
     postImage.className = 'posts-image';
@@ -75,12 +75,12 @@ function getRedditData() {
     let postTitle = document.createElement('div');
     postTitle.className = 'posts-title';
     postTitle.addEventListener('click', function () {
-    if (postTitle.className === 'posts-title') {
-      postTitle.className = 'posts-title-active';
-    } else if (postTitle.className === 'posts-title-active') {
-      postTitle.className = 'posts-title';
-    }
-  })
+      if (postTitle.className === 'posts-title') {
+        postTitle.className = 'posts-title-active';
+      } else if (postTitle.className === 'posts-title-active') {
+        postTitle.className = 'posts-title';
+      }
+    })
     postTitle.innerHTML = children[i].data.title;
     postsCard.appendChild(postTitle);
 
@@ -109,7 +109,7 @@ function getRedditData() {
         postDescription.className = 'posts-description';
       }
     })
-    
+
     postsContainer.appendChild(postsCard);
   }
 }
@@ -117,14 +117,15 @@ function getRedditData() {
 
 let searchButton = document.getElementById('search-button');
 let searchBar = document.getElementById('search-bar');
-searchButton.addEventListener('click', function(){
+searchButton.addEventListener('click', function () {
   console.log('clicked')
-  sendRedditRequest(searchBar.innerHTML)();
+  sendRedditRequest(searchBar.innerHTML.split(' ').join(''))();
 
-let plusx = document.getElementById('iconx');
-console.log(plusx);
-plusx.addEventListener('click', function(){
-  console.log('clicked');
-  console.log('hiiiiii');
-})
+  let plusx = document.getElementById('iconx');
+  console.log(plusx);
+  plusx.addEventListener('click', function () {
+    console.log('clicked');
+    console.log('hiiiiii');
+  })
+
 })
