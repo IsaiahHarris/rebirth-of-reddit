@@ -26,8 +26,23 @@ body{
   align-content: center;
   background-color:#383838;
 }
-
-
+.search-container{
+  display: flex;
+  justify-content: center;
+  margin-top:6px;
+}
+.search-bar{
+  color:#383838;
+  background-color:whitesmoke;
+  width:100px;
+}
+.search-button{
+  height: 20px;
+  background-color: whitesmoke;
+  color: #383838;
+  padding:3px;
+  width:50px;
+}
 .subred-choice1, .subred-choice2, .subred-choice3, .hawaii-sub-red{
   padding:15px;
   padding-top:11px;
