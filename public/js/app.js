@@ -39,7 +39,7 @@ function sendRedditRequest(subReddit) {
     request.addEventListener('load', getRedditData);
   }
 }
-soccerSubRedChoice.addEventListener('click', sendRedditRequest('soccer'));
+soccerSubRedChoice.addEventListener('click', sendRedditRequest('soccerpics'));
 natureSubRedChoice.addEventListener('click', sendRedditRequest('natureismetal'));
 hawaiiSubRedChoice.addEventListener('click', sendRedditRequest('hawaiipics'));
 randomSubRedChoice.addEventListener('click', randomSubRedditFunc);
