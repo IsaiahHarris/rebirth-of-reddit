@@ -1,4 +1,3 @@
-
 //main container
 let postsContainer = document.getElementById('posts-container');
 //subreddit choices
@@ -7,31 +6,15 @@ let natureSubRedChoice = document.getElementById('nature-subRed');
 let hawaiiSubRedChoice = document.getElementById('hawaii-subRed');
 let randomSubRedChoice = document.getElementById('random-subRed')
 //random choice generator
-
 let randomSubRedChoices = ['Pizza', 'japanpics', 'Astronomy', 'NatureIsFuckingLit', 'electricdaisycarnival', 'ArchitecturePorn', 'CoolPics', ''];
 
 function randomSubRedditFunc() {
-
-  // let lastSubRed;
   let randomize = randomSubRedChoices[Math.floor(Math.random() * randomSubRedChoices.length)];
-  console.log(randomize);
-  // while (randomSubRed === lastSubRed) {
-  //   randomSubRed = randomSubRedChoices[Math.floor(Math.random() * randomSubRedChoices.length)];
-  // }
-  // lastSubRed = randomSubRed;
-  // postsContainer.innerHTML = '';
-  // const getRandomObj = new XMLHttpRequest();
-  // getRandomObj.addEventListener('load', getRedditData);
-  // getRandomObj.open('GET', `https://www.reddit.com/r/${randomize}/.json?raw_json=1`);
-  // getRandomObj.send();
-  sendRedditRequest(randomize)();
 
+  sendRedditRequest(randomize)();
 }
 
-
-
 function sendRedditRequest(subReddit) {
-
   return function () {
     let request = new XMLHttpRequest();
     request.open('GET', `https://www.reddit.com/r/${subReddit}/.json?raw_json=1`)
@@ -44,17 +27,8 @@ natureSubRedChoice.addEventListener('click', sendRedditRequest('natureismetal'))
 hawaiiSubRedChoice.addEventListener('click', sendRedditRequest('hawaiipics'));
 randomSubRedChoice.addEventListener('click', randomSubRedditFunc);
 
-
-//soccer page
-
-
-
-
-
 function getRedditData() {
-
   const responseObj = JSON.parse(this.responseText);
-  console.log(responseObj);
   let children = responseObj.data.children;
 
   postsContainer.innerHTML = '';
@@ -113,7 +87,6 @@ function getRedditData() {
     postsContainer.appendChild(postsCard);
   }
 }
-
 
 let searchButton = document.getElementById('search-button');
 let searchBar = document.getElementById('search-bar');
